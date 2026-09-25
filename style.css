@@ -1,0 +1,153 @@
+/* --- GLOBAL MATRIX RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0B0C10; /* Deep Obsidian Background */
+    color: #C5C6C7; /* Crisp Light Silver Text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* --- BENTO GRID ARCHITECTURE --- */
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(120px, auto);
+    gap: 16px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* --- CORE BENTO ITEMS STYLE --- */
+.bento-item {
+    background-color: #1F2833; /* Dark Slate Slate */
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* --- HOVER EFFECT FOR CLICKABLE TILES --- */
+a.bento-item:hover {
+    transform: translateY(-4px);
+    border-color: #66FCF1; /* Electric Teal Accent Glow */
+    box-shadow: 0 8px 24px rgba(102, 252, 241, 0.15);
+}
+
+/* --- ITEM SPANNING CONFIGURATION --- */
+.profile-card {
+    grid-column: span 3;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-color: #45A29E;
+}
+
+.wide-card {
+    grid-column: span 2;
+    position: relative;
+}
+
+.tall-card {
+    grid-row: span 2;
+    background-color: #4F46E5; /* Amethyst Base */
+    color: #ffffff;
+}
+
+.tall-card p {
+    color: #E2E8F0;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.creative-card {
+    background-color: #F43F5E; /* Rose Pink Tile */
+    color: #ffffff;
+}
+.creative-card p { color: #FFE4E6; font-size: 12px; margin-top: 4px;}
+
+.degree-card {
+    background-color: #10B981; /* Emerald Green Tile */
+    color: #ffffff;
+}
+.degree-card p { color: #D1FAE5; font-size: 12px; margin-top: 4px;}
+
+/* --- HEADER SUB COMPONENTS --- */
+.avatar-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #45A29E;
+    color: #0B0C10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.profile-text h1 {
+    color: #66FCF1;
+    font-size: 24px;
+}
+
+.wide-card h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: rgba(102, 252, 241, 0.15);
+    color: #66FCF1;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* --- STATS BOXES --- */
+.stat-box {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-color: #45A29E;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #66FCF1;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #C5C6C7;
+    margin-top: 4px;
+}
+
+/* --- RESPONSIVE MOBILE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+    .profile-card, .wide-card, .tall-card, .creative-card, .degree-card, .stat-box {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+}
