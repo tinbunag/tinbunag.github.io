@@ -69,13 +69,28 @@ a.bento-item:hover {
 .tall-card p {
     color: #E2E8F0;
     margin-top: 8px;
-  /* --- HEADER SUB COMPONENTS --- */
+    font-size: 13px;
+}
+
+.creative-card {
+    background-color: #F43F5E; /* Rose Pink Tile */
+    color: #ffffff;
+}
+.creative-card p { color: #FFE4E6; font-size: 12px; margin-top: 4px;}
+
+.degree-card {
+    background-color: #10B981; /* Emerald Green Tile */
+    color: #ffffff;
+}
+.degree-card p { color: #D1FAE5; font-size: 12px; margin-top: 4px;}
+
+/* --- HEADER SUB COMPONENTS --- */
 .avatar-placeholder {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    object-fit: cover; /* Para hindi mabinat o ma-squish ang mukha mo */
-    border: 2px solid #66FCF1; /* Neon Teal Border line ring */
+    object-fit: cover;
+    border: 2px solid #66FCF1;
     margin-right: 20px;
 }
 
@@ -90,28 +105,6 @@ a.bento-item:hover {
     font-size: 13px;
     color: #45A29E;
     margin-top: 4px;
-}
-
-.degree-card p { color: #D1FAE5; font-size: 12px; margin-top: 4px;}
-
-/* --- HEADER SUB COMPONENTS --- */
-.avatar-placeholder {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #45A29E;
-    color: #0B0C10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.profile-text h1 {
-    color: #66FCF1;
-    font-size: 24px;
 }
 
 .wide-card h2 {
@@ -133,6 +126,12 @@ a.bento-item:hover {
 
 /* --- STATS BOXES --- */
 .stat-box {
+    background-color: #1F2833;
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
